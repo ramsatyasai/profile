@@ -48,28 +48,58 @@
                 opacity: 1;
             }
         }
+
+        .side-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80%;
+            max-width: 300px;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .side-panel.open {
+            transform: translateX(0);
+            display: block;
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-purple-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">KAPILESWARAPU RAM SATYA SAI</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#about" class="nav-link hover:text-purple-300">About</a></li>
-                    <li><a href="#education" class="nav-link hover:text-purple-300">Education</a></li>
-                    <li><a href="#skills" class="nav-link hover:text-purple-300">Skills</a></li>
-                    <li><a href="#certifications" class="nav-link hover:text-purple-300">Certifications</a></li>
-                    <li><a href="#projects" class="nav-link hover:text-purple-300">Projects</a></li>
-                    <li><a href="#achievements" class="nav-link hover:text-purple-300">Achievements</a></li>
-                    <li><a href="#contact" class="nav-link hover:text-purple-300">Contact</a></li>
-                </ul>
-            </nav>
+    <header class="bg-purple-600 text-white p-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50">
+        <div class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
         </div>
+        <h1 class="text-3xl font-bold">KAPILESWARAPU RAM SATYA SAI</h1>
     </header>
 
-    <main class="container mx-auto mt-6">
+    <nav class="side-panel bg-purple-600 text-white p-4">
+        <ul class="space-y-4">
+            <li><a href="#about" class="nav-link hover:text-purple-300">About</a></li>
+            <li><a href="#education" class="nav-link hover:text-purple-300">Education</a></li>
+            <li><a href="#skills" class="nav-link hover:text-purple-300">Skills</a></li>
+            <li><a href="#certifications" class="nav-link hover:text-purple-300">Certifications</a></li>
+            <li><a href="#projects" class="nav-link hover:text-purple-300">Projects</a></li>
+            <li><a href="#achievements" class="nav-link hover:text-purple-300">Achievements</a></li>
+            <li><a href="#contact" class="nav-link hover:text-purple-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container mx-auto mt-24">
         <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-6 card fade-in">
             <h2 class="text-2xl font-bold mb-4">About Me</h2>
             <div class="bg-gray-50 p-4 rounded-lg shadow-inner card">
@@ -217,7 +247,15 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+
+                // Close the side panel after clicking a link
+                document.querySelector('.side-panel').classList.remove('open');
             });
+        });
+
+        // Toggle side panel
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('.side-panel').classList.toggle('open');
         });
     </script>
 </body>
