@@ -10,7 +10,7 @@ const TESTIMONIALS = [
 	{
 		name: 'Sarah Chen',
 		role: 'CTO, AeroStack Global',
-		content: "Working with Nexus was a game-changer for our data pipeline. They didn't just write code; they optimized our entire business logic. We've seen a 70% increase in processing speed and a significant drop in operational costs.",
+		content: "Working with Dhritv was a game-changer for our data pipeline. They didn't just write code; they optimized our entire business logic. We've seen a 70% increase in processing speed and a significant drop in operational costs.",
 		color: 'text-neon-blue',
 		initials: 'SC',
 		gradient: 'from-neon-blue/20 to-transparent'
@@ -18,7 +18,7 @@ const TESTIMONIALS = [
 	{
 		name: 'Mark Thompson',
 		role: 'Founder, FinFlow Systems',
-		content: "The level of technical depth the Nexus team brings is unparalleled. They built our trading automation system from scratch, and the result exceeded all our performance benchmarks. Truly elite engineers.",
+		content: "The level of technical depth the Dhritv team brings is unparalleled. They built our trading automation system from scratch, and the result exceeded all our performance benchmarks. Truly elite engineers.",
 		color: 'text-neon-purple',
 		initials: 'MT',
 		gradient: 'from-neon-purple/20 to-transparent'
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
 	{
 		name: 'James Dudley',
 		role: 'CEO, HealthSync',
-		content: "Nexus delivered our MVP three weeks ahead of schedule without compromising on quality. Their communication is sharp and their execution is flawless. Best agency we've ever partnered with.",
+		content: "Dhritv delivered our MVP three weeks ahead of schedule without compromising on quality. Their communication is sharp and their execution is flawless. Best agency we've ever partnered with.",
 		color: 'text-neon-green',
 		initials: 'JD',
 		gradient: 'from-neon-green/20 to-transparent'

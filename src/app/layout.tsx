@@ -22,8 +22,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Solutions | Elite Software & Automation Agency",
-  description: "Nexus Solutions builds high-performance AI, automation, and 3D web experiences. Premium software agency for ambitious founders.",
+  title: "Dhritv | Elite Software & Automation Agency",
+  description: "Dhritv builds high-performance AI, automation, and 3D web experiences. Premium software agency for ambitious founders.",
 };
 
 export default function RootLayout({

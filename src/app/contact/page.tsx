@@ -33,7 +33,7 @@ export default function ContactPage() {
     // ────────────────────────────────────────────────────────────────────────
     const WHATSAPP_NUMBER = "919032381330";
 
-    const message = `New Project Inquiry: Nexus Solutions
+    const message = `New Project Inquiry: Dhritv
 Client Name: ${name}
 Work Email: ${email}
 Service: ${service || "Not specified"}
@@ -194,7 +194,7 @@ ${details}`;
                 </a>
 
                 <a
-                  href="mailto:hello@nexussolutions.com"
+                  href="mailto:hello@dhritv.com"
                   className="group p-8 rounded-[2rem] bg-white/5 border border-white/5 hover:border-neon-blue/30 transition-all flex items-center gap-6"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center text-neon-blue shadow-[0_0_20px_rgba(41,121,255,0.1)] group-hover:scale-110 transition-transform">
@@ -203,7 +203,7 @@ ${details}`;
                   <div>
                     <p className="font-bold text-lg mb-1 font-display">Email</p>
                     <p className="text-sm text-muted-foreground">
-                      hello@nexussolutions.com
+                      hello@dhritv.com
                     </p>
                   </div>
                   <ArrowUpRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-neon-blue" />

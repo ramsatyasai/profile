@@ -259,7 +259,7 @@ export default function PortfolioPage() {
                 </span>
               </h2>
               <p className="text-sm text-muted-foreground mb-8 max-w-[480px] mx-auto relative z-10">
-                Join the founders who chose Nexus for their most critical
+                Join the founders who chose Dhritv for their most critical
                 software operations.
               </p>
               <div className="flex flex-wrap justify-center gap-4 relative z-10">

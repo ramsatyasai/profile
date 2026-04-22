@@ -30,13 +30,13 @@ export default function AboutPage() {
           <ScrollReveal>
             <p className="section-label justify-center mb-4">Who We Are</p>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-display">
-              Built for{" "}
+              The Digital Pillar for{" "}
               <span className="gradient-text bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
-                Scale.
+                Your Business.
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-[580px] mx-auto leading-relaxed">
-              Nexus is a collective of engineers and designers obsessed with
+              Dhritv is a collective of engineers and designers obsessed with
               efficiency, automation, and measurable growth.
             </p>
           </ScrollReveal>
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] max-w-md mx-auto">
                   <Image
                     src="/assets/vision.png"
-                    alt="Nexus Vision"
+                    alt="Dhritv Vision"
                     width={800}
                     height={1000}
                     className="w-full h-full object-cover"
@@ -71,14 +71,17 @@ export default function AboutPage() {
                   <span className="text-white">Modern Founders.</span>
                 </h2>
                 <p className="text-muted-foreground text-[16px] leading-relaxed mb-6">
-                  Founded in 2025, Nexus was born from a simple observation:
-                  most agencies prioritize delivery speed over ROI. We decided
-                  to flip that script.
+                  At Dhritv, we believe that high-performance engineering is the
+                  foundation of digital growth. Rooted in the concept of constancy
+                  and support, we specialize in building high-conversion websites
+                  and custom automations that act as a reliable backbone for
+                  your brand.
                 </p>
                 <p className="text-muted-foreground text-[16px] leading-relaxed mb-10">
-                  Our mission is to give startups and small businesses the same
-                  automation and technical excellence usually reserved for
-                  Fortune 500 companies.
+                  We blend a modern Indian aesthetic with technical precision to
+                  ensure your digital presence is not just beautiful, but resolute
+                  and scalable. Whether it’s web development or process automation,
+                  we build the foundations that hold.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

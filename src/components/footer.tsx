@@ -10,7 +10,7 @@ export function Footer() {
               href="/"
               className="text-2xl font-display font-bold bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent inline-block mb-4"
             >
-              NEXUS
+              Dhritv
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-[260px]">
               Elite software agency building the tools of tomorrow. Serving
@@ -134,7 +134,7 @@ export function Footer() {
         <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8" />
 
         <p className="text-muted-foreground text-xs text-center">
-          &copy; 2025 Nexus . All rights reserved. Built for scale.
+          &copy; 2025 Dhritv. All rights reserved. Built for scale.
         </p>
       </div>
     </footer>

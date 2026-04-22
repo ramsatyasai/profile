@@ -47,7 +47,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Nexus Design System Additions */
+  /* Dhritv Design System Additions */
   --color-void: #04060F;
   --color-abyss: #070B18;
   --color-surface: #0D1128;
@@ -88,7 +88,7 @@
   --ring: #2979FF;
   --radius: 0.75rem;
 
-  /* Legacy Nexus Variables */
+  /* Legacy Dhritv Variables */
   --c-text-secondary: #8A9BC8;
   --g-primary: linear-gradient(135deg, #2979FF 0%, #7C3AED 100%);
   --g-accent: linear-gradient(135deg, #00E5FF 0%, #2979FF 100%);

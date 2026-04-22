@@ -35,7 +35,7 @@ export function Navbar() {
 		>
 			<div className="container mx-auto px-6 flex justify-between items-center">
 				<Link href="/" className="text-xl font-display font-bold tracking-widest bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent">
-					NEXUS
+					Dhritv
 				</Link>
 
 				{/* Desktop Links */}

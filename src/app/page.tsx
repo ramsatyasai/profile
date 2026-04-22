@@ -87,7 +87,7 @@ export default function Home() {
                     <div className="relative aspect-square">
                       <Image
                         src="/assets/hero.png"
-                        alt="Nexus Solutions"
+                        alt="Dhritv"
                         fill
                         sizes="(max-width: 768px) 100vw, 440px"
                         className="object-cover"
@@ -320,7 +320,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-16 lg:gap-20 items-center">
             <ScrollReveal direction="right">
               <div>
-                <p className="section-label mb-6">Why Nexus</p>
+                <p className="section-label mb-6">Why Dhritv</p>
                 <h2 className="text-3xl md:text-5xl font-bold mb-8 font-display leading-tight">
                   Forward-Thinking
                   <br />
@@ -498,7 +498,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-sm text-muted-foreground max-w-[480px] mx-auto mb-10 leading-relaxed">
-                Stop wasting time on manual tasks. Build the future with Nexus
+                Stop wasting time on manual tasks. Build the future with Dhritv
                 today.
               </p>
 
