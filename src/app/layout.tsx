@@ -22,8 +22,60 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Dhritv | Elite Software & Automation Agency",
-  description: "Dhritv builds high-performance AI, automation, and 3D web experiences. Premium software agency for ambitious founders.",
+  metadataBase: new URL("https://profile-six-nu-71.vercel.app"),
+  title: {
+    default: "Dhritv | Elite Software & Automation Agency",
+    template: "%s | Dhritv",
+  },
+  description:
+    "Dhritv builds high-performance AI, automation, and 3D web experiences. Premium software agency for ambitious founders seeking digital excellence.",
+  keywords: [
+    "Software Agency",
+    "Automation",
+    "AI Integration",
+    "Next.js",
+    "3D Web Design",
+    "Dhritv",
+    "Business Automation",
+    "Custom Software",
+  ],
+  authors: [{ name: "Dhritv Team", url: "https://profile-six-nu-71.vercel.app" }],
+  creator: "Dhritv",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://profile-six-nu-71.vercel.app",
+    title: "Dhritv | Elite Software & Automation Agency",
+    description:
+      "Dhritv builds high-performance AI, automation, and 3D web experiences. Premium software agency for ambitious founders.",
+    siteName: "Dhritv",
+    images: [
+      {
+        url: "/assets/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Dhritv - Elite Software & Automation Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dhritv | Elite Software & Automation Agency",
+    description:
+      "Dhritv builds high-performance AI, automation, and 3D web experiences.",
+    images: ["/assets/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
