@@ -45,9 +45,7 @@ export function HomeContent() {
                     </span>
                   </h1>
                   <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-[560px] leading-relaxed">
-                    We build high-performance software, AI-driven automations,
-                    and conversion-first websites that empower modern founders
-                    to scale faster.
+                    At Dhritv, we specialize in <strong>Transforming Ideas</strong> into <strong>Autonomous Reality</strong>. We build high-performance software, AI-driven automations, and conversion-first websites that empower modern founders to scale faster and more efficiently than ever before.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link href="/contact" className="btn-primary px-8 py-4">
@@ -220,13 +218,75 @@ export function HomeContent() {
             </ScrollReveal>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 mb-20">
             <Link
               href="/services"
               className="btn-secondary px-6 py-3 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all text-xs font-semibold"
             >
               Explore All Services →
             </Link>
+          </div>
+
+          {/* ═══ OUR PROCESS (NEW SEO CONTENT) ═══ */}
+          <div className="mt-32 pt-20 border-t border-white/5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              <ScrollReveal direction="right">
+                <div className="space-y-8">
+                  <p className="section-label">Our Methodology</p>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display">
+                    How We Achieve <br />
+                    <span className="text-neon-cyan">Autonomous Reality.</span>
+                  </h2>
+                  <div className="space-y-6 text-muted-foreground leading-relaxed text-base">
+                    <p>
+                      The journey of <strong>Transforming Ideas</strong> starts with a deep understanding of your business bottlenecks. We don't just build software; we engineer ecosystems that breathe life into your vision. Our process is designed to minimize friction and maximize output through intelligent architectural choices.
+                    </p>
+                    <p>
+                      By leveraging the latest advancements in Artificial Intelligence and Machine Learning, we create systems that can think, adapt, and evolve. This is the essence of an <strong>Autonomous Reality</strong>—where your digital infrastructure handles the heavy lifting, allowing you to focus on high-level strategic growth.
+                    </p>
+                    <p>
+                      From the initial wireframe to the final deployment, our agency maintains a focus on performance, security, and scalability. We believe that every modern founder deserves a technical partner that moves as fast as they do. Our agile development cycle ensures that your product is always at the cutting edge of technological possibility.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="left">
+                <div className="grid grid-cols-1 gap-6">
+                  {[
+                    {
+                      step: "01",
+                      title: "Consultation & Discovery",
+                      text: "We dive deep into your existing workflows to identify where automation can drive the most ROI. Our team analyzes your data structures and user journeys to find hidden opportunities for optimization.",
+                    },
+                    {
+                      step: "02",
+                      title: "Strategic Architecture",
+                      text: "We design a scalable technical roadmap using modern frameworks like Next.js, Python, and cloud-native tools. Our goal is to create a robust foundation that can support millions of users without breaking a sweat.",
+                    },
+                    {
+                      step: "03",
+                      title: "Autonomous Deployment",
+                      text: "Our engineers build and deploy your solution with integrated CI/CD pipelines and automated testing. We ensure that your system is self-healing and requires minimal manual intervention to stay operational.",
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-neon-blue/20 transition-all group"
+                    >
+                      <span className="text-4xl font-black font-display text-white/10 group-hover:text-neon-blue/20 transition-colors">
+                        {item.step}
+                      </span>
+                      <h4 className="text-xl font-bold mt-2 mb-3 font-display">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
@@ -329,42 +389,42 @@ export function HomeContent() {
                   </span>
                 </h2>
 
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {[
                     {
                       title: "Pixel-Perfect Execution",
-                      desc: "We don't settle for 'good enough.' Every interaction is deliberate and intentional.",
+                      desc: "We don't settle for 'good enough.' Every interaction is deliberate and intentional. Our design team focuses on micro-interactions and visual hierarchy to ensure your brand feels premium and trustworthy at every touchpoint. In the world of <strong>Transforming Ideas</strong>, the details are what define the final reality.",
                       iconColor: "text-neon-blue",
                       bgColor: "bg-neon-blue/10",
                     },
                     {
                       title: "Scalable Architecture",
-                      desc: "Built with your next 10x in mind. Systems that grow as your business grows.",
+                      desc: "Built with your next 10x in mind. Systems that grow as your business grows. We utilize cloud-native technologies and serverless infrastructures to ensure your platform can handle rapid spikes in traffic without compromising on speed or reliability. This is how we build for the <strong>Autonomous Reality</strong> of tomorrow.",
                       iconColor: "text-neon-purple",
                       bgColor: "bg-neon-purple/10",
                     },
                     {
-                      title: "Result-Oriented",
-                      desc: "Every line of code is written to drive measurable ROI, not vanity metrics.",
+                      title: "Result-Oriented Engineering",
+                      desc: "Every line of code is written to drive measurable ROI, not vanity metrics. We integrate advanced analytics and user behavior tracking from day one to ensure your software is a revenue-generating asset. Our commitment to data-driven development is what sets us apart as a leading software agency.",
                       iconColor: "text-neon-green",
                       bgColor: "bg-neon-green/10",
                     },
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-5 items-start">
+                    <div key={i} className="flex gap-6 items-start">
                       <div
                         className={cn(
-                          "w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10",
+                          "w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/10",
                           item.bgColor,
                           item.iconColor,
                         )}
                       >
-                        <Check size={16} />
+                        <Check size={20} />
                       </div>
                       <div>
-                        <h4 className="text-base font-bold mb-1 font-display">
+                        <h4 className="text-lg font-bold mb-2 font-display">
                           {item.title}
                         </h4>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
+                        <p className="text-muted-foreground text-sm leading-relaxed">
                           {item.desc}
                         </p>
                       </div>
@@ -414,6 +474,63 @@ export function HomeContent() {
                 </Card3D>
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ DETAILED EXPERTISE (SEO SECTION) ═══ */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto space-y-16">
+            <ScrollReveal>
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold font-display">
+                  Elevating Businesses Through <br />
+                  <span className="text-neon-purple">Strategic Software Engineering.</span>
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  As a specialized software agency, our mission is centered around <strong>Transforming Ideas</strong> into scalable, digital products. We understand that in the modern economy, your technical infrastructure is your most valuable asset. That's why we focus on building solutions that are not just functional, but foundational to your success.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our expertise in <strong>Autonomous Reality</strong> allows us to create platforms that reduce manual overhead and increase operational efficiency. Whether it's through AI-powered customer support agents, automated financial reporting, or self-optimizing marketing funnels, we provide the tools you need to outpace the competition.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <ScrollReveal delay={0.1}>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white font-display">Artificial Intelligence</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    We integrate state-of-the-art LLM models and machine learning algorithms into your existing business processes. Our AI solutions are designed to handle complex decision-making tasks, enabling an <strong>Autonomous Reality</strong> where your business can operate 24/7 with minimal human intervention.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white font-display">Custom Web Platforms</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Using the power of Next.js and React, we develop high-conversion web experiences that are optimized for speed and SEO. Every site we build is a step toward <strong>Transforming Ideas</strong> into a digital presence that captures leads and drives revenue automatically.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white font-display">Business Process Automation</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Our Python-based automation scripts eliminate the "busy work" from your day-to-day operations. By connecting your disparate software tools into a cohesive, automated workflow, we free up your time to focus on what truly matters: your vision and your growth.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.4}>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white font-display">Digital Transformation</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    We guide founders through the process of legacy system modernization. <strong>Transforming Ideas</strong> from outdated stacks to modern, serverless architectures ensures that your business is ready for the demands of the future digital landscape.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
