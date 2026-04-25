@@ -34,9 +34,14 @@ export function Navbar() {
 			)}
 		>
 			<div className="container mx-auto px-6 flex justify-between items-center">
-				<Link href="/" className="text-xl font-display font-bold tracking-widest bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent">
-					Dhritv
-				</Link>
+				<div className="flex flex-col">
+					<Link href="/" className="text-xl font-display font-bold tracking-widest bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent leading-none">
+						Dhritv
+					</Link>
+					<span className="text-[8px] text-neon-blue/60 uppercase tracking-[0.2em] font-medium mt-1">
+						AI Native Software Agency
+					</span>
+				</div>
 
 				{/* Desktop Links */}
 				<ul className="hidden md:flex items-center gap-8">
