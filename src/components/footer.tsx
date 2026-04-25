@@ -19,9 +19,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
               Company
-            </h4>
+            </div>
             <ul className="flex flex-col gap-4">
               <li>
                 <Link
@@ -59,9 +59,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
               Services
-            </h4>
+            </div>
             <ul className="flex flex-col gap-4">
               <li>
                 <Link
@@ -99,9 +99,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-display font-bold mb-6">
               Connect
-            </h4>
+            </div>
             <ul className="flex flex-col gap-4">
               <li>
                 <a

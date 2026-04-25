@@ -161,15 +161,15 @@ export function HomeContent() {
                   <div className="w-10 h-10 rounded-xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center mb-6 text-neon-blue">
                     <Zap size={20} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 font-display">
+                  <div className="text-lg font-bold mb-3 font-display">
                     Business Automation
-                  </h3>
+                  </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                     Eliminate repetitive tasks with intelligent Python &
                     low-code automation pipelines that run 24/7.
                   </p>
                   <div className="flex items-center gap-2 text-neon-blue text-[10px] font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
-                    Learn more <ArrowRight size={12} />
+                    Explore Business Automation <ArrowRight size={12} />
                   </div>
                 </Card3D>
               </Link>
@@ -182,15 +182,15 @@ export function HomeContent() {
                   <div className="w-10 h-10 rounded-xl bg-neon-purple/10 border border-neon-purple/20 flex items-center justify-center mb-6 text-neon-purple">
                     <Globe size={20} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 font-display">
+                  <div className="text-lg font-bold mb-3 font-display">
                     SEO Web Platforms
-                  </h3>
+                  </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                     Blazing fast, SEO-optimized websites engineered to convert
                     visitors into measurable revenue.
                   </p>
                   <div className="flex items-center gap-2 text-neon-purple text-[10px] font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
-                    Learn more <ArrowRight size={12} />
+                    View SEO Web Platforms <ArrowRight size={12} />
                   </div>
                 </Card3D>
               </Link>
@@ -203,15 +203,15 @@ export function HomeContent() {
                   <div className="w-10 h-10 rounded-xl bg-neon-cyan/10 border border-neon-cyan/20 flex items-center justify-center mb-6 text-neon-cyan">
                     <Cpu size={20} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 font-display">
+                  <div className="text-lg font-bold mb-3 font-display">
                     AI / ML Integration
-                  </h3>
+                  </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                     Embedding LLM agents and ML models directly into your
                     products and workflows for competitive edge.
                   </p>
                   <div className="flex items-center gap-2 text-neon-cyan text-[10px] font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
-                    Learn more <ArrowRight size={12} />
+                    Analyze AI Integrations <ArrowRight size={12} />
                   </div>
                 </Card3D>
               </Link>
@@ -332,7 +332,7 @@ export function HomeContent() {
                     href="/portfolio"
                     className="btn-secondary px-5 py-2.5 text-[10px]"
                   >
-                    Read Case Study →
+                    View AdvConnect Results →
                   </Link>
                 </div>
               </Card3D>
@@ -365,7 +365,7 @@ export function HomeContent() {
                     href="/portfolio"
                     className="btn-secondary px-5 py-2.5 text-[10px]"
                   >
-                    Read Case Study →
+                    Analyze AlgoTrade Performance →
                   </Link>
                 </div>
               </Card3D>
@@ -421,9 +421,9 @@ export function HomeContent() {
                         <Check size={20} />
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold mb-2 font-display">
+                        <div className="text-lg font-bold mb-2 font-display">
                           {item.title}
-                        </h4>
+                        </div>
                         <p className="text-muted-foreground text-sm leading-relaxed">
                           {item.desc}
                         </p>
