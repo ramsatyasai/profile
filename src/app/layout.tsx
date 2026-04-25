@@ -4,21 +4,29 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { DottedSurface } from "@/components/ui/dotted-surface";
+import dynamic from "next/dynamic";
+
+const DottedSurface = dynamic(
+  () => import("@/components/ui/dotted-surface").then((mod) => mod.DottedSurface),
+  { ssr: false }
+);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
