@@ -7,7 +7,7 @@ import styles from './Journey.module.css';
 
 const timeline = [
   {
-    date: 'Present – 2024',
+    date: 'Present ',
     title: 'Freelancing & Building Saifolio',
     description: 'Actively acquiring freelance clients, delivering AI automation projects, and documenting the journey publicly.',
     accent: 'blue',
@@ -21,7 +21,7 @@ const timeline = [
     status: 'upcoming',
   },
   {
-    date: '2024',
+    date: '2025',
     title: 'First AI Automation Project',
     description: 'Deployed an AI-powered clinic receptionist that reduced manual call handling by 60%.',
     accent: 'blue',
