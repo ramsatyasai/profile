@@ -19,7 +19,7 @@ export default function Contact() {
     setSending(true);
 
     // Replace with your actual WhatsApp number (country code + number, no + or spaces)
-    const phoneNumber = '9032381330';
+    const phoneNumber = '919032381330'; // India (+91) country code prefix required by wa.me
     const text = `Hi Ram,\n\nMy name is ${formData.name}.\nEmail: ${formData.email}\n\n${formData.message}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
