@@ -1,70 +1,135 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Bell, Bot, UserCheck } from 'lucide-react';
+import { GithubIcon } from '@/components/icons';
 import styles from './Projects.module.css';
 
 const projects = [
   {
+    icon: Bot,
     title: 'AI Clinic Receptionist',
-    problem: 'Clinics lose time managing appointments and answering repetitive patient queries.',
-    solution: 'An AI voice/text agent that handles scheduling and patient FAQs 24/7.',
+    problem: 'Clinics were losing 40+ hours per week answering repetitive patient calls.',
+    solution: 'An AI voice/chat agent that handles appointment scheduling and patient FAQs 24/7.',
     tech: ['Python', 'FastAPI', 'LLMs', 'Twilio'],
-    results: 'Reduced manual call handling by 60%.',
+    results: '60% reduction in manual call handling',
     demoLink: '#',
-    githubLink: '#'
+    githubLink: '#',
+    accentColor: 'blue',
   },
   {
+    icon: Bell,
     title: 'Appointment Reminder Automation',
-    problem: 'High no-show rates for booked appointments.',
-    solution: 'Automated workflow that sends WhatsApp/SMS reminders and handles rescheduling.',
+    problem: 'High no-show rates were causing significant revenue loss for service businesses.',
+    solution: 'Automated workflow sending WhatsApp/SMS reminders and handling rescheduling responses.',
     tech: ['n8n', 'Node.js', 'WhatsApp API'],
-    results: 'Decreased no-shows by 40% within the first month.',
+    results: '40% fewer no-shows in month one',
     demoLink: '#',
-    githubLink: '#'
+    githubLink: '#',
+    accentColor: 'cyan',
   },
   {
+    icon: UserCheck,
     title: 'Lead Qualification Automation',
-    problem: 'Sales teams spend too much time filtering unqualified leads.',
-    solution: 'An AI-powered form that scores leads in real-time and routes them appropriately.',
+    problem: 'Sales teams spent most of their time manually reviewing and filtering unqualified leads.',
+    solution: 'AI-powered intake form that scores and routes leads in real-time, saving human review.',
     tech: ['React', 'Python', 'OpenAI API', 'PostgreSQL'],
-    results: 'Saved 15 hours per week for the sales team.',
+    results: '15 hours per week saved for sales team',
     demoLink: '#',
-    githubLink: '#'
-  }
+    githubLink: '#',
+    accentColor: 'blue',
+  },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.65, ease: [0.16, 1, 0.3, 1] },
+  }),
+};
 
 export default function Projects() {
   return (
     <section id="projects" className={`section ${styles.projects}`}>
       <div className="container">
-        <h2 className="section-title">Featured Projects</h2>
-        <p className="section-subtitle">Real Problems, Automated Solutions</p>
-        
+        {/* Header */}
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="section-eyebrow">Featured Work</span>
+          <h2 className={`section-title ${styles.title}`}>
+            Problems Solved,<br />
+            <span className="text-gradient">Results Delivered</span>
+          </h2>
+          <p className="section-description">
+            Every project starts with a real business problem. Here's how I've solved them.
+          </p>
+        </motion.div>
+
+        {/* Cards */}
         <div className={styles.grid}>
-          {projects.map((project, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.imagePlaceholder}>
-                <span>Project Preview</span>
-              </div>
-              <div className={styles.content}>
-                <h3 className={styles.title}>{project.title}</h3>
-                <div className={styles.techStack}>
-                  {project.tech.map((t, i) => (
-                    <span key={i} className={styles.badge}>{t}</span>
+          {projects.map((project, i) => {
+            const Icon = project.icon;
+            return (
+              <motion.div
+                key={i}
+                className={`${styles.card} ${styles[`card_${project.accentColor}`]}`}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="show"
+                custom={i}
+                viewport={{ once: true, margin: '-60px' }}
+                whileHover={{ y: -8, transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } }}
+              >
+                {/* Card Header */}
+                <div className={styles.cardHeader}>
+                  <div className={`${styles.iconWrap} ${styles[`icon_${project.accentColor}`]}`}>
+                    <Icon size={22} strokeWidth={1.75} />
+                  </div>
+                  <div className={styles.cardLinks}>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="GitHub">
+                      <GithubIcon size={16} />
+                    </a>
+                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="Live Demo">
+                      <ArrowUpRight size={16} />
+                    </a>
+                  </div>
+                </div>
+
+                <h3 className={styles.cardTitle}>{project.title}</h3>
+
+                {/* Details */}
+                <div className={styles.detailGroup}>
+                  <p className={styles.detailLabel}>Problem</p>
+                  <p className={styles.detailText}>{project.problem}</p>
+                </div>
+                <div className={styles.detailGroup}>
+                  <p className={styles.detailLabel}>Solution</p>
+                  <p className={styles.detailText}>{project.solution}</p>
+                </div>
+
+                {/* Result Pill */}
+                <div className={`${styles.resultPill} ${styles[`result_${project.accentColor}`]}`}>
+                  <span className={`${styles.resultDot} ${styles[`dot_${project.accentColor}`]}`} />
+                  {project.results}
+                </div>
+
+                {/* Tech Stack */}
+                <div className={styles.techRow}>
+                  {project.tech.map((t, j) => (
+                    <span key={j} className="pill pill-neutral">{t}</span>
                   ))}
                 </div>
-                
-                <div className={styles.details}>
-                  <p><strong>Problem:</strong> {project.problem}</p>
-                  <p><strong>Solution:</strong> {project.solution}</p>
-                  <p><strong>Results:</strong> <span className={styles.highlight}>{project.results}</span></p>
-                </div>
-                
-                <div className={styles.links}>
-                  <a href={project.demoLink} className="btn btn-primary" style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}>Live Demo</a>
-                  <a href={project.githubLink} className="btn btn-outline" style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}>GitHub</a>
-                </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

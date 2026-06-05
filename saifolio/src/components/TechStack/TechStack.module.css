@@ -1,44 +1,98 @@
 .techStack {
-  background-color: var(--bg-color);
+  background-color: var(--bg-primary);
 }
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title { text-align: center; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
 }
 
-.category {
-  background-color: var(--surface-color);
-  padding: 2rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+.card {
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.categoryName {
-  font-size: 1.25rem;
+.cardAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.accent_blue { background: var(--gradient-primary); }
+.accent_cyan { background: linear-gradient(90deg, var(--cyan) 0%, var(--blue) 100%); }
+
+.catName {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
+  margin: 0;
+  padding-top: 0.25rem;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .skillItem {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.skillItem::before {
-  content: '✓';
-  color: var(--accent-color);
-  margin-right: 0.75rem;
-  font-weight: bold;
+.skillTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.skillName {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.skillPct {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.pct_blue { color: var(--blue-light); }
+.pct_cyan { color: var(--cyan-light); }
+
+.barBg {
+  height: 4px;
+  background: var(--surface-3);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.bar_blue { background: var(--gradient-primary); }
+.bar_cyan { background: linear-gradient(90deg, var(--cyan) 0%, var(--blue) 100%); }

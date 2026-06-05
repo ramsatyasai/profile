@@ -1,46 +1,92 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './Journey.module.css';
 
 const timeline = [
   {
-    date: 'Present',
-    title: 'Building Saifolio & Freelancing',
-    description: 'Actively taking on freelance clients to solve business bottlenecks using AI automation and custom software.'
+    date: 'Present – 2024',
+    title: 'Freelancing & Building Saifolio',
+    description: 'Actively acquiring freelance clients, delivering AI automation projects, and documenting the journey publicly.',
+    accent: 'blue',
+    status: 'current',
   },
   {
     date: 'Upcoming',
     title: 'Starting M.Tech',
-    description: 'Pursuing higher education to deepen my knowledge in advanced computing, AI, and scalable architectures.'
+    description: 'Pursuing higher education to deepen knowledge in advanced computing, AI systems, and scalable software.',
+    accent: 'cyan',
+    status: 'upcoming',
   },
   {
-    date: 'Recent',
-    title: 'Built First AI Automation Project',
-    description: 'Successfully deployed an AI-powered receptionist that reduced manual clinic call handling by 60%.'
+    date: '2024',
+    title: 'First AI Automation Project',
+    description: 'Deployed an AI-powered clinic receptionist that reduced manual call handling by 60%.',
+    accent: 'blue',
+    status: 'done',
   },
   {
-    date: 'Past',
-    title: 'Started Software Development',
-    description: 'Completed multiple academic and freelance projects, building a strong foundation in Python and backend systems.'
-  }
+    date: '2022 – 2024',
+    title: 'Foundation in Software Development',
+    description: 'Completed multiple academic and freelance projects, building a strong Python & backend engineering foundation.',
+    accent: 'cyan',
+    status: 'done',
+  },
 ];
 
 export default function Journey() {
   return (
     <section id="journey" className={`section ${styles.journey}`}>
       <div className="container">
-        <h2 className="section-title">Building in Public</h2>
-        <p className="section-subtitle">My Journey So Far</p>
-        
+        {/* Header */}
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="section-eyebrow">Building in Public</span>
+          <h2 className={`section-title ${styles.title}`}>
+            The Journey So Far
+          </h2>
+          <p className="section-description" style={{ textAlign: 'center' }}>
+            Documenting the path from student to AI automation consultant.
+          </p>
+        </motion.div>
+
+        {/* Timeline */}
         <div className={styles.timeline}>
-          {timeline.map((item, index) => (
-            <div key={index} className={styles.timelineItem}>
-              <div className={styles.dot}></div>
-              <div className={styles.content}>
-                <span className={styles.date}>{item.date}</span>
-                <h3 className={styles.title}>{item.title}</h3>
-                <p className={styles.description}>{item.description}</p>
+          {/* The vertical line */}
+          <div className={styles.timelineLine} />
+
+          {timeline.map((item, i) => (
+            <motion.div
+              key={i}
+              className={`${styles.item} ${styles[`item_${item.accent}`]}`}
+              initial={{ opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ delay: i * 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {/* Dot */}
+              <div className={`${styles.dot} ${styles[`dot_${item.accent}`]} ${item.status === 'current' ? styles.dotCurrent : ''}`}>
+                {item.status === 'upcoming' && <div className={styles.dotRing} />}
               </div>
-            </div>
+
+              {/* Content Card */}
+              <div className={`glass ${styles.card}`}>
+                <span className={`${styles.date} ${styles[`date_${item.accent}`]}`}>
+                  {item.date}
+                </span>
+                {item.status === 'current' && (
+                  <span className={styles.currentBadge}>Current</span>
+                )}
+                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <p className={styles.cardDesc}>{item.description}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
