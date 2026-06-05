@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/icons';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Hero.module.css';
 
 const container = {
@@ -16,7 +17,11 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: EASE_OUT },
+  },
 };
 
 export default function Hero() {
@@ -97,7 +102,7 @@ export default function Hero() {
           className={styles.statsRow}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: 1, duration: 0.8, ease: EASE_OUT }}
         >
           {[
             { value: '3+', label: 'AI Projects Built' },

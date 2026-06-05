@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, MapPin, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/icons';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Contact.module.css';
 
 export default function Contact() {
@@ -18,7 +19,6 @@ export default function Contact() {
     e.preventDefault();
     setSending(true);
 
-    // Replace with your actual WhatsApp number (country code + number, no + or spaces)
     const phoneNumber = '919032381330'; // India (+91) country code prefix required by wa.me
     const text = `Hi Ram,\n\nMy name is ${formData.name}.\nEmail: ${formData.email}\n\n${formData.message}`;
     const encodedText = encodeURIComponent(text);
@@ -39,7 +39,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
         >
           <span className="section-eyebrow">Contact</span>
           <h2 className={`section-title ${styles.title}`}>
@@ -57,9 +57,8 @@ export default function Contact() {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: 0.15, duration: 0.7, ease: EASE_OUT }}
         >
-          {/* Glow */}
           <div className={styles.boxGlow} aria-hidden="true" />
 
           {/* Info Panel */}

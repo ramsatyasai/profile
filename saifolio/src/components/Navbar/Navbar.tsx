@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -28,7 +29,7 @@ export default function Navbar() {
       className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.6, ease: EASE_OUT }}
     >
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
@@ -73,7 +74,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.3, ease: EASE_OUT }}
           >
             <div className={styles.mobileLinks}>
               {navLinks.map((link, i) => (
@@ -84,7 +85,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
+                  transition={{ delay: i * 0.05, ease: EASE_OUT }}
                 >
                   {link.label}
                 </motion.a>

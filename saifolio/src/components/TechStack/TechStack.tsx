@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './TechStack.module.css';
 
 const categories = [
@@ -58,7 +59,7 @@ export default function TechStack() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
         >
           <span className="section-eyebrow">Tech Stack</span>
           <h2 className={`section-title ${styles.title}`}>
@@ -76,7 +77,7 @@ export default function TechStack() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ delay: catIdx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: catIdx * 0.1, duration: 0.6, ease: EASE_OUT }}
             >
               <div className={`${styles.cardAccent} ${styles[`accent_${cat.accent}`]}`} />
               <h3 className={styles.catName}>{cat.name}</h3>
@@ -93,7 +94,7 @@ export default function TechStack() {
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
-                        transition={{ delay: catIdx * 0.1 + i * 0.07 + 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ delay: catIdx * 0.1 + i * 0.07 + 0.3, duration: 0.8, ease: EASE_OUT }}
                       />
                     </div>
                   </div>

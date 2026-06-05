@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Journey.module.css';
 
 const timeline = [
@@ -45,7 +46,7 @@ export default function Journey() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
         >
           <span className="section-eyebrow">Building in Public</span>
           <h2 className={`section-title ${styles.title}`}>
@@ -58,9 +59,7 @@ export default function Journey() {
 
         {/* Timeline */}
         <div className={styles.timeline}>
-          {/* The vertical line */}
           <div className={styles.timelineLine} />
-
           {timeline.map((item, i) => (
             <motion.div
               key={i}
@@ -68,14 +67,12 @@ export default function Journey() {
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ delay: i * 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: i * 0.12, duration: 0.6, ease: EASE_OUT }}
             >
-              {/* Dot */}
               <div className={`${styles.dot} ${styles[`dot_${item.accent}`]} ${item.status === 'current' ? styles.dotCurrent : ''}`}>
                 {item.status === 'upcoming' && <div className={styles.dotRing} />}
               </div>
 
-              {/* Content Card */}
               <div className={`glass ${styles.card}`}>
                 <span className={`${styles.date} ${styles[`date_${item.accent}`]}`}>
                   {item.date}

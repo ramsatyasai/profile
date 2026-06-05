@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Bell, Bot, UserCheck } from 'lucide-react';
 import { GithubIcon } from '@/components/icons';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Projects.module.css';
 
 const projects = [
@@ -42,15 +43,6 @@ const projects = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  show: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.65, ease: [0.16, 1, 0.3, 1] },
-  }),
-};
-
 export default function Projects() {
   return (
     <section id="projects" className={`section ${styles.projects}`}>
@@ -61,7 +53,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
         >
           <span className="section-eyebrow">Featured Work</span>
           <h2 className={`section-title ${styles.title}`}>
@@ -81,12 +73,11 @@ export default function Projects() {
               <motion.div
                 key={i}
                 className={`${styles.card} ${styles[`card_${project.accentColor}`]}`}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="show"
-                custom={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
-                whileHover={{ y: -8, transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } }}
+                transition={{ delay: i * 0.1, duration: 0.65, ease: EASE_OUT }}
+                whileHover={{ y: -8, transition: { duration: 0.3, ease: EASE_OUT } }}
               >
                 {/* Card Header */}
                 <div className={styles.cardHeader}>

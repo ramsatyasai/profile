@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Zap, BrainCircuit, Wrench } from 'lucide-react';
+import { EASE_OUT } from '@/lib/animations';
 import styles from './Services.module.css';
 
 const services = [
@@ -36,15 +37,6 @@ const services = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 32 },
-  show: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  }),
-};
-
 export default function Services() {
   return (
     <section id="services" className={`section ${styles.services}`}>
@@ -55,7 +47,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
         >
           <span className="section-eyebrow">Services</span>
           <h2 className={`section-title ${styles.title}`}>
@@ -75,11 +67,10 @@ export default function Services() {
               <motion.div
                 key={i}
                 className={`${styles.card} ${styles[`card_${service.accent}`]}`}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="show"
-                custom={i}
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
+                transition={{ delay: i * 0.08, duration: 0.6, ease: EASE_OUT }}
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
               >
                 <div className={`${styles.iconWrap} ${styles[`icon_${service.accent}`]}`}>
